@@ -22,7 +22,7 @@ def handle_docs_photo(message):
     if message.content_type == 'photo':
         file_info = bot.get_file(message.photo[len(message.photo)-1].file_id)
         downloaded_file = bot.download_file(file_info.file_path)
-
+        # your file
         src = '/home/alina/Downloads/file_0.jpg'
         with open(src, 'wb') as new_file:
            new_file.write(downloaded_file)
@@ -33,6 +33,7 @@ def handle_docs_photo(message):
     elif message.content_type == 'document':
         file_info = bot.get_file(message.document.file_id)
         downloaded_file = bot.download_file(file_info.file_path)
+        # your file
         src = '/home/alina/Downloads/file_0.jpg'
         with open(src, 'wb') as new_file:
             new_file.write(downloaded_file)
